@@ -1654,6 +1654,167 @@ table.dash-table tbody tr{animation:fadeSlideIn .4s ease both;}
   }
 }
 
+/* ============================================================
+   STACKLY DASHBOARD — REAL-CONTENT MOBILE FIXES
+   Targeted at markup used in admin.html / dashboard.html.
+   Mobile-only (max-width:900px and narrower) — desktop untouched.
+   ============================================================ */
+
+@media screen and (max-width: 900px) {
+
+  /* ---------- Generic .field / .form-row used OUTSIDE .login-form
+     (Admin Account, My Profile, modal forms) — safety net so these
+     never collapse or overflow on mobile even if base .field rules
+     live elsewhere. ---------- */
+  .field {
+    margin-bottom: 16px;
+    min-width: 0;
+  }
+  .field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: .8rem;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 100% !important;
+    min-width: 0;
+  }
+
+  /* ---------- Profile avatar upload row (sec-profile) ---------- */
+  .avatar-upload {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .avatar-upload .big-av {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  .avatar-upload > div:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* ---------- Sidebar plan card text (can hold long renewal/location strings) ---------- */
+  .sidebar-plan {
+    overflow-wrap: anywhere;
+  }
+  .sidebar-plan .sp-top {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* ---------- Long login IDs / emails in topbar & user chip must wrap, not overflow ---------- */
+  .dash-topbar .sub,
+  .dash-topbar .sub strong,
+  .user-chip .meta .id {
+    overflow-wrap: anywhere;
+  }
+
+  /* ---------- Modal field grids (Invite/Add Booking modals use plain .field stacks) ---------- */
+  .modal-box .field {
+    margin-bottom: 16px;
+  }
+  .modal-box .field:last-of-type {
+    margin-bottom: 8px;
+  }
+
+  /* ---------- Quick action tile buttons are real <button> elements —
+     reset default button styling so they behave like the design intends. ---------- */
+  .qa-tile {
+    width: 100%;
+    border: 1px solid var(--line);
+    text-align: left;
+    font-family: var(--ff-body);
+  }
+
+  /* ---------- Settings/avatar rows: toggle switch must never shrink ---------- */
+  .settings-row .toggle-switch,
+  .avatar-row .toggle-switch {
+    flex-shrink: 0;
+  }
+
+  /* ---------- Review card rating + name row: avoid squeeze when both wrap ---------- */
+  .review-card .rc-who {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  /* ---------- Progress row labels with amounts (₹640 / ₹2,000 etc.) ---------- */
+  .progress-row .top {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+
+  /* ---------- Membership / danger action buttons stack cleanly ---------- */
+  .panel > .action-btn {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .avatar-upload {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================================
+   CRITICAL FIX — nested flex overflow on topbar
+   The unlabeled wrapper <div style="display:flex;..."> around the
+   menu button + title (present on every dashboard page) has no
+   min-width, so as a flex child it defaults to min-width:auto and
+   refuses to shrink below its content's natural width. With longer
+   titles ("Admin Console — Admin", "Welcome back, Guest 👋") this
+   silently forces the ENTIRE topbar — and often the page — to
+   overflow horizontally on mobile. This is very likely the root
+   cause of "some sections not responsive": it's not one section,
+   it's every page pushed wide by this one untamed flex child.
+   ============================================================ */
+@media screen and (max-width: 900px) {
+  .dash-topbar > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+}
+
+/* ---------- Donut legend can get squeezed to near-zero width
+   between 600–900px because it has no explicit flex-basis while
+   sitting next to a fixed 145px donut in a row layout. ---------- */
+@media screen and (max-width: 900px) {
+  .donut-wrap {
+    flex-wrap: wrap;
+  }
+  .legend {
+    flex: 1 1 160px;
+    min-width: 160px;
+  }
+}
+
+/* ---------- Emoji / wide glyphs in headings (👋) must not force
+   line overflow on very narrow screens. ---------- */
+@media screen and (max-width: 420px) {
+  .dash-topbar h1 {
+    word-break: break-word;
+  }
+}
+
 /* ---------- Focus visibility for keyboard/switch-control users on mobile ---------- */
 @media screen and (max-width: 900px) {
   a:focus-visible,
