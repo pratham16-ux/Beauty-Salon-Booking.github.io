@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Stackly Beauty & Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dash-body" data-role="customer">
+
+<div class="sidebar-overlay"></div>
+<div class="dash-shell">
+
+  <aside class="dash-sidebar">
+    <div class="logo-wrap"><img src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=260&h=104&output=webp&q=80&fit=inside" alt="Stackly"></div>
+    <span class="sidebar-role-tag"><span class="dot"></span> Customer Portal</span>
+    <ul class="dash-nav">
+      <li class="nav-group-label">Main</li>
+      <li><a href="#" data-section="sec-overview" class="active"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span> Overview</a></li>
+      <li><a href="#" data-section="sec-appointments"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="9" x2="21" y2="9"/></svg></span> My Appointments</a></li>
+      <li><a href="#" data-section="sec-history"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15.5,14"/></svg></span> Booking History</a></li>
+
+      <li class="nav-group-label">Discover</li>
+      <li><a href="#" data-section="sec-stylists"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="18" cy="8.5" r="2.4"/><path d="M15.5 20c0-2.6 1.6-4.7 3.7-5.3"/></svg></span> Favourite Stylists</a></li>
+      <li><a href="#" data-section="sec-reviews"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.6 1.6-7-5.3-4.6 7-.6L12 2l2.9 6.7 7 .6-5.3 4.6 1.6 7z"/></svg></span> Reviews & Feedback</a></li>
+
+      <li class="nav-group-label">Account</li>
+      <li><a href="#" data-section="sec-membership"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><polyline points="8.5,12.8 7,21 12,18 17,21 15.5,12.8"/></svg></span> Membership</a></li>
+      <li><a href="#" data-section="sec-payments"><span class="ic"><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="10" x2="21.5" y2="10"/></svg></span> Payment Methods</a></li>
+      <li><a href="#" data-section="sec-profile"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span> My Profile</a></li>
+      <li><a href="#" data-section="sec-settings"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13.5a1.7 1.7 0 000-3l1.1-1.6-1.7-1.7-1.6 1.1a1.7 1.7 0 00-3 0l-.3-1.9h-2.4l-.3 1.9a1.7 1.7 0 00-3 0L6.6 7.2 4.9 8.9l1.1 1.6a1.7 1.7 0 000 3L4.9 15l1.7 1.7 1.6-1.1a1.7 1.7 0 003 0l.3 1.9h2.4l.3-1.9a1.7 1.7 0 003 0l1.6 1.1 1.7-1.7z"/></svg></span> Settings</a></li>
+    </ul>
+    
+    <div class="logout-link"><a href="#" class="logout-btn"><span class="ic">Log Out</a></div>
+  <div class="sidebar-plan">
+      <div class="sp-top"><b>Signature Plan</b><span class="badge-soft" style="padding:2px 10px;font-size:.68rem;">Active</span></div>
+      <div class="sp-meta">Renews 1 Oct 2026 · Stackly Beauty & Salon, Bengaluru</div>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+
+    <div class="dash-topbar">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+        <div class="topbar-left">
+          <div class="breadcrumb">Dashboard <span>›</span> <b>Overview</b></div>
+          <h1>Welcome back, <span data-user-name>Guest</span> 👋</h1>
+          <p class="sub">Login ID: <strong data-user-id>—</strong> · Last sign-in: <span data-login-time>—</span></p>
+        </div>
+      </div>
+      <div class="topbar-tools">
+        <div class="dash-search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+          <input type="text" placeholder="Search bookings, stylists...">
+        </div>
+        <div class="notif-wrap">
+          <div class="notif-bell" data-dropdown-toggle="#notif-panel">
+            <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>
+            <span class="notif-badge">3</span>
+          </div>
+          <div class="dropdown-panel" id="notif-panel">
+            <div class="dp-head">Notifications</div>
+            <div class="notif-item"><span class="dot"></span><div class="txt"><b>Appointment confirmed</b><span>Balayage with Aisha Rao, tomorrow 4 PM</span></div></div>
+            <div class="notif-item"><span class="dot"></span><div class="txt"><b>Loyalty reward unlocked</b><span>You earned 50 bonus points</span></div></div>
+            <div class="notif-item"><span class="dot"></span><div class="txt"><b>Reminder</b><span>Facial appointment in 2 days</span></div></div>
+            <div class="dp-foot">View all notifications</div>
+          </div>
+        </div>
+        <div class="user-chip user-menu" data-dropdown-toggle="#user-panel">
+          <div class="avatar"><span data-user-initial>G</span></div>
+          <div class="meta">
+            <div class="name" data-user-name>Guest</div>
+            <div class="id" data-user-id>—</div>
+          </div>
+          <svg class="chip-caret" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+          <div class="dropdown-panel" id="user-panel">
+            <a href="#" class="user-menu-item" data-section-jump="sec-profile">My Profile</a>
+            <a href="#" class="user-menu-item" data-section-jump="sec-settings">Settings</a>
+            <a href="#" class="user-menu-item danger logout-btn">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="dash-section" id="sec-overview">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Upcoming Bookings</div><div class="k-value" data-target="2">0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div></div>
+          <div class="k-delta">Next: Tomorrow, 4 PM</div><svg class="spark"></svg>
+        </div>
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Total Visits</div><div class="k-value" data-target="17">0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15.5,14"/></svg></div></div>
+          <div class="k-delta">Since Jan 2024</div><svg class="spark"></svg>
+        </div>
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Loyalty Points</div><div class="k-value" data-target="1240">0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><polyline points="8.5,12.8 7,21 12,18 17,21 15.5,12.8"/></svg></div></div>
+          <div class="k-delta">240 to next reward</div><svg class="spark"></svg>
+        </div>
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Amount Saved</div><div class="k-value" data-target="4200" data-prefix="₹">₹0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><line x1="2.5" y1="10" x2="21.5" y2="10"/></svg></div></div>
+          <div class="k-delta">via Membership</div><svg class="spark"></svg>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Quick Actions</h3></div>
+        <div class="quick-actions">
+          <button class="qa-tile" data-open-modal="add-modal">
+            <div class="qa-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div>
+            <div><div class="qa-label">Book an appointment</div><div class="qa-desc">Choose a service and time slot</div></div>
+          </button>
+          <button class="qa-tile" data-action="reschedule">
+            <div class="qa-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15.5,14"/></svg></div>
+            <div><div class="qa-label">Reschedule a visit</div><div class="qa-desc">Move an upcoming booking</div></div>
+          </button>
+          <button class="qa-tile" data-section-jump="sec-reviews">
+            <div class="qa-icon"><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.6 1.6-7-5.3-4.6 7-.6L12 2l2.9 6.7 7 .6-5.3 4.6 1.6 7z"/></svg></div>
+            <div><div class="qa-label">Leave a review</div><div class="qa-desc">Rate your last visit</div></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Spending This Year</h3><span class="badge-soft">₹18,400 total</span></div>
+        <div class="linechart-wrap" data-points="1400,1900,1250,2450,1750,2980" data-labels="Jan,Feb,Mar,Apr,May,Jun"></div>
+      </div>
+
+      <div class="dash-grid-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Recent Activity</h3></div>
+          <div class="timeline">
+            <div class="timeline-item"><div class="t-title">Booking confirmed — Balayage & Colour</div><div class="t-meta">Today, 10:14 AM</div></div>
+            <div class="timeline-item"><div class="t-title">Earned 50 loyalty points</div><div class="t-meta">Yesterday, 6:40 PM</div></div>
+            <div class="timeline-item"><div class="t-title">Payment of ₹1,200 completed</div><div class="t-meta">18 Aug, 3:05 PM</div></div>
+            <div class="timeline-item"><div class="t-title">Reviewed Rohan Mehta — 5★</div><div class="t-meta">18 Aug, 3:10 PM</div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Loyalty Progress</h3></div>
+          <div class="donut-wrap">
+            <div class="donut" style="--p1:62%;--p2:62%;"></div>
+            <div class="legend">
+              <div><span class="dot" style="background:var(--rose);"></span> Points earned (1240)</div>
+              <div><span class="dot" style="background:#d8cfc2;"></span> To next tier (760)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- APPOINTMENTS -->
+    <section class="dash-section" id="sec-appointments">
+      <div class="panel">
+        <div class="panel-head"><h3>Upcoming Appointments</h3><button class="action-btn primary" data-open-modal="add-modal">+ New Booking</button></div>
+        <div class="table-toolbar">
+          <div class="filter-tabs"><button class="active" data-filter="all">All</button><button data-filter="confirmed">Confirmed</button><button data-filter="pending">Pending</button></div>
+          <div class="mini-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg><input type="text" placeholder="Search..."></div>
+        </div>
+        <table class="dash-table">
+          <thead><tr><th class="sortable">Service</th><th class="sortable">Stylist</th><th class="sortable">Date & Time</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>Balayage & Colour</td><td>Aisha Rao</td><td>06 Sep, 4:00 PM</td><td><span class="status-pill confirmed">Confirmed</span></td>
+              <td><button class="action-btn" data-action="reschedule">Reschedule</button><button class="action-btn danger" data-action="cancel">Cancel</button></td></tr>
+            <tr><td>Radiance Facial</td><td>Nadia Fernandes</td><td>14 Sep, 11:30 AM</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn" data-action="reschedule">Reschedule</button><button class="action-btn danger" data-action="cancel">Cancel</button></td></tr>
+          </tbody>
+        </table>
+        <div class="table-pagination"><span>Showing 1–2 of 2</span><div class="page-btns"><button class="active">1</button></div></div>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="dash-section" id="sec-history">
+      <div class="panel">
+        <div class="panel-head"><h3>Booking History</h3><button class="action-btn" data-action="export">Export CSV</button></div>
+        <table class="dash-table">
+          <thead><tr><th>Service</th><th>Stylist</th><th>Date</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Signature Haircut</td><td>Rohan Mehta</td><td>18 Aug 2026</td><td>₹1,200</td><td><span class="status-pill completed">Completed</span></td><td><button class="action-btn" data-action="view">View</button></td></tr>
+            <tr><td>Gel Manicure</td><td>Priya Sen</td><td>02 Aug 2026</td><td>₹900</td><td><span class="status-pill completed">Completed</span></td><td><button class="action-btn" data-action="view">View</button></td></tr>
+            <tr><td>Deep Tissue Spa</td><td>Nadia Fernandes</td><td>21 Jul 2026</td><td>₹2,800</td><td><span class="status-pill cancelled">Cancelled</span></td><td><button class="action-btn" data-action="view">View</button></td></tr>
+            <tr><td>Bridal Trial</td><td>Priya Sen</td><td>05 Jul 2026</td><td>₹6,000</td><td><span class="status-pill completed">Completed</span></td><td><button class="action-btn" data-action="view">View</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- STYLISTS -->
+    <section class="dash-section" id="sec-stylists">
+      <div class="panel">
+        <div class="panel-head"><h3>Favourite Stylists</h3></div>
+        <p class="section-intro">Stylists you've booked before, so you can go straight back to who you trust.</p>
+        <div class="avatar-list">
+          <div class="avatar-row"><div class="av">A</div><div class="meta"><div class="n">Aisha Rao</div><div class="s">Colour Director · 4.9★</div></div><button class="action-btn primary" data-action="add">Book Again</button></div>
+          <div class="avatar-row"><div class="av">R</div><div class="meta"><div class="n">Rohan Mehta</div><div class="s">Master Barber · 4.8★</div></div><button class="action-btn primary" data-action="add">Book Again</button></div>
+          <div class="avatar-row"><div class="av">N</div><div class="meta"><div class="n">Nadia Fernandes</div><div class="s">Skin Therapist · 5.0★</div></div><button class="action-btn primary" data-action="add">Book Again</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="dash-section" id="sec-reviews">
+      <div class="panel">
+        <div class="panel-head"><h3>Write a Review</h3></div>
+        <p class="section-intro">Tell other clients how your last visit went. Your review will appear on your profile and help the salon improve.</p>
+        <div class="field"><label>Which visit?</label>
+          <select>
+            <option>Signature Haircut — Rohan Mehta, 18 Aug 2026</option>
+            <option>Gel Manicure — Priya Sen, 02 Aug 2026</option>
+            <option>Bridal Trial — Priya Sen, 05 Jul 2026</option>
+          </select>
+        </div>
+        <div class="field"><label>Your rating</label>
+          <div class="rating-input">
+            <button type="button">★</button><button type="button">★</button><button type="button">★</button><button type="button" class="active">★</button><button type="button" class="active">★</button>
+          </div>
+        </div>
+        <div class="field"><label>Your comments</label><textarea rows="3" placeholder="Share what you liked, or what could be better..."></textarea></div>
+        <button class="action-btn primary" data-action="submit-review">Submit Review</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Your Past Reviews</h3><span class="badge-soft">3 reviews</span></div>
+        <div class="review-list">
+          <div class="review-card">
+            <div class="rc-top">
+              <div class="rc-who"><div class="stars">★★★★★</div><span class="rc-name">You</span></div>
+              <span class="rc-date">18 Aug 2026</span>
+            </div>
+            <p class="rc-text">Rohan gave me exactly the fade I asked for and was quick about it too. Booking through the app was painless.</p>
+            <div class="rc-service">Signature Haircut · Rohan Mehta</div>
+          </div>
+          <div class="review-card">
+            <div class="rc-top">
+              <div class="rc-who"><div class="stars">★★★★<span class="off">★</span></div><span class="rc-name">You</span></div>
+              <span class="rc-date">02 Aug 2026</span>
+            </div>
+            <p class="rc-text">Nice manicure, lasted almost two weeks. Would have liked a few more shade options on the day.</p>
+            <div class="rc-service">Gel Manicure · Priya Sen</div>
+          </div>
+          <div class="review-card">
+            <div class="rc-top">
+              <div class="rc-who"><div class="stars">★★★★★</div><span class="rc-name">You</span></div>
+              <span class="rc-date">05 Jul 2026</span>
+            </div>
+            <p class="rc-text">Priya talked me through every option for the bridal trial and made sure I felt comfortable before the real day.</p>
+            <div class="rc-service">Bridal Trial · Priya Sen</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP -->
+    <section class="dash-section" id="sec-membership">
+      <div class="panel">
+        <div class="panel-head"><h3>Your Membership: Signature Plan</h3><span class="badge-soft">Active</span></div>
+        <div class="progress-row">
+          <div class="top"><span>Treatments used this month</span><span>2 / 2</span></div>
+          <div class="progress-track"><div class="progress-fill" data-value="100"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="top"><span>Product discount used</span><span>₹640 / ₹2,000</span></div>
+          <div class="progress-track"><div class="progress-fill" data-value="32"></div></div>
+        </div>
+        <button class="action-btn primary" data-action="save">Upgrade Plan</button>
+        <button class="action-btn danger" data-action="delete">Cancel Membership</button>
+      </div>
+    </section>
+
+    <!-- PAYMENTS -->
+    <section class="dash-section" id="sec-payments">
+      <div class="panel">
+        <div class="panel-head"><h3>Saved Payment Methods</h3><button class="action-btn primary" data-open-modal="add-modal">+ Add Method</button></div>
+        <table class="dash-table">
+          <thead><tr><th>Method</th><th>Details</th><th>Default</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>UPI</td><td>guest@okhdfcbank</td><td>✓ Default</td><td><button class="action-btn danger" data-action="delete">Remove</button></td></tr>
+            <tr><td>Card</td><td>Visa •••• 4471</td><td>—</td><td><button class="action-btn danger" data-action="delete">Remove</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="dash-section" id="sec-profile">
+      <div class="panel">
+        <div class="panel-head"><h3>My Profile</h3></div>
+        <div class="avatar-upload">
+          <div class="big-av"><span data-user-initial>G</span></div>
+          <div><div style="font-weight:700;" data-user-name>Guest User</div><div style="font-size:.82rem;color:#8a8074;">Member since Jan 2024</div></div>
+        </div>
+        <div class="form-row" style="max-width:640px;">
+          <div class="field"><label>Full Name</label><input type="text" value="Guest User"></div>
+          <div class="field"><label>Login ID</label><input type="text" data-user-id readonly style="background:var(--ivory-2);"></div>
+        </div>
+        <div class="form-row" style="max-width:640px;">
+          <div class="field"><label>Phone</label><input type="tel" value="+91 98200 12345"></div>
+          <div class="field"><label>Date of Birth</label><input type="date"></div>
+        </div>
+        <button class="action-btn primary" data-action="save">Save Changes</button>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="dash-section" id="sec-settings">
+      <div class="panel">
+        <div class="panel-head"><h3>Preferences</h3></div>
+        <div class="settings-row">
+          <div><div class="lbl">SMS Reminders</div><div class="desc">Get a text 24 hours before your appointment.</div></div>
+          <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+        </div>
+        <div class="settings-row">
+          <div><div class="lbl">Email Offers</div><div class="desc">Receive promotions and seasonal offers.</div></div>
+          <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+        </div>
+        <div class="settings-row">
+          <div><div class="lbl">Two-Factor Login</div><div class="desc">Add an extra layer of security.</div></div>
+          <label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Modals -->
+<div class="modal-overlay" id="reschedule-modal">
+  <div class="modal-box">
+    <h3>Reschedule Appointment</h3>
+    <div class="field"><label>New Date</label><input type="date"></div>
+    <div class="field"><label>New Time</label><input type="time"></div>
+    <div class="modal-actions">
+      <button class="btn gold" style="flex:1;justify-content:center;" data-close-modal="reschedule-modal" onclick="dashToast('Appointment rescheduled.')">Confirm</button>
+      <button class="btn ghost" style="flex:1;justify-content:center;" data-close-modal="reschedule-modal">Cancel</button>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="view-modal">
+  <div class="modal-box">
+    <h3>Booking Details</h3>
+    <p class="lede">Full invoice and service notes for this visit would appear here.</p>
+    <div class="modal-actions">
+      <button class="btn gold" style="flex:1;justify-content:center;" data-close-modal="view-modal">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="add-modal">
+  <div class="modal-box">
+    <h3>New Booking</h3>
+    <div class="field"><label>Service</label><select><option>Signature Haircut</option><option>Balayage & Colour</option><option>Radiance Facial</option></select></div>
+    <div class="field"><label>Date</label><input type="date"></div>
+    <div class="modal-actions">
+      <button class="btn gold" style="flex:1;justify-content:center;" data-close-modal="add-modal" onclick="dashToast('Booking request sent.')">Book</button>
+      <button class="btn ghost" style="flex:1;justify-content:center;" data-close-modal="add-modal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

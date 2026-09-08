@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking — Stackly Beauty & Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=260&h=104&output=webp&q=80&fit=inside" alt="Stackly Beauty & Salon"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="booking.html" class="active">Booking</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="login.html" class="nav-signin"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg><span class="txt">Sign In</span></a>
+      <a href="booking.html" class="btn gold"><span class="txt">Book Now</span></a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+
+<!-- 1. HERO -->
+<section class="hero" style="min-height:50vh;">
+  <div class="wrap" style="grid-template-columns:1fr;">
+    <div class="hero-text fade-in-slow">
+      <p class="eyebrow">RESERVE YOUR SLOT</p>
+      <h1>Book in <em>under</em> a minute.</h1>
+      <p>Pick a service, choose your artist, confirm a time — done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROCESS STRIP -->
+<div class="marquee"><div class="track"><span>CHOOSE SERVICE</span>•<span>PICK STYLIST</span>•<span>SELECT TIME</span>•<span>CONFIRM</span>•<span>CHOOSE SERVICE</span>•<span>PICK STYLIST</span>•<span>SELECT TIME</span>•<span>CONFIRM</span></div></div>
+
+<!-- 3. BOOKING FORM -->
+<section class="section">
+  <div class="wrap grid cols-2" style="align-items:flex-start;gap:50px;">
+    <div class="reveal">
+      <p class="eyebrow">APPOINTMENT DETAILS</p>
+      <h2>Tell us what you need</h2>
+      <p class="lede">Fill the form and our concierge confirms within 15 minutes during studio hours.</p>
+      <div class="badge-row" style="margin-top:24px;">
+        <span class="badge">Instant confirmation</span>
+        <span class="badge">Free reschedule</span>
+        <span class="badge">No advance payment</span>
+      </div>
+    </div>
+    <form class="form-block reveal" id="booking-form">
+      <div class="form-row">
+        <div class="field"><label>Full Name</label><input type="text" required placeholder="Your name"></div>
+        <div class="field"><label>Phone Number</label><input type="tel" required placeholder="+91 00000 00000"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Service</label>
+          <select required>
+            <option value="">Select a service</option>
+            <option>Signature Haircut</option>
+            <option>Balayage / Colour</option>
+            <option>Radiance Facial</option>
+            <option>Bridal Package</option>
+            <option>Nail Atelier</option>
+            <option>Spa Ritual</option>
+          </select>
+        </div>
+        <div class="field"><label>Preferred Stylist</label>
+          <select>
+            <option value="">Any available</option>
+            <option>Aisha Rao</option>
+            <option>Rohan Mehta</option>
+            <option>Nadia Fernandes</option>
+            <option>Priya Sen</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Date</label><input type="date" required></div>
+        <div class="field"><label>Time</label><input type="time" required></div>
+      </div>
+      <div class="field" style="margin-bottom:24px;"><label>Notes (optional)</label><textarea rows="3" placeholder="Anything we should know?"></textarea></div>
+      <button type="submit" class="btn gold" style="width:100%;justify-content:center;">Confirm Booking Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- 4. WHY BOOK ONLINE -->
+<section class="section" style="background:var(--ivory-2);">
+  <div class="wrap">
+    <div class="section-head center reveal"><p class="eyebrow">WHY BOOK ONLINE</p><h2>Faster, clearer, easier</h2></div>
+    <div class="grid cols-3 stagger">
+      <div class="service-card"><h3>Real-time slots</h3><p>See exactly what's open, no back-and-forth calls.</p></div>
+      <div class="service-card"><h3>Stylist choice</h3><p>Pick your preferred artist directly in the form.</p></div>
+      <div class="service-card"><h3>Instant reminders</h3><p>Get SMS confirmations and reminders automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. STUDIO HOURS -->
+<section class="section">
+  <div class="wrap grid cols-2" style="align-items:center;">
+    <div class="reveal">
+      <p class="eyebrow">STUDIO HOURS</p>
+      <h2>When we're open</h2>
+      <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+        <li>Tuesday – Friday: 10:00 AM – 8:00 PM</li>
+        <li>Saturday – Sunday: 9:00 AM – 9:00 PM</li>
+        <li>Monday: Closed</li>
+      </ul>
+    </div>
+    <div class="map-block reveal">Studio Map — 204 Linking Road, Bandra West</div>
+  </div>
+</section>
+
+<!-- 6. LOCATIONS -->
+<section class="section" style="background:var(--ivory-2);">
+  <div class="wrap">
+    <div class="section-head center reveal"><p class="eyebrow">OUR STUDIOS</p><h2>Five locations across Mumbai</h2></div>
+    <div class="grid cols-3 stagger">
+      <div class="service-card"><h3>Bandra West</h3><p>204 Linking Road</p></div>
+      <div class="service-card"><h3>Andheri West</h3><p>12 Veera Desai Road</p></div>
+      <div class="service-card"><h3>Powai</h3><p>Hiranandani Gardens</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. POLICIES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center reveal"><p class="eyebrow">BOOKING POLICIES</p><h2>Good to know before you book</h2></div>
+    <div class="grid cols-3 stagger">
+      <div class="service-card"><h3>Cancellations</h3><p>Free up to 4 hours before your slot.</p></div>
+      <div class="service-card"><h3>Late arrivals</h3><p>15-minute grace period, then slot may be shortened.</p></div>
+      <div class="service-card"><h3>Group bookings</h3><p>Call ahead for parties of 3 or more.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. PAYMENT OPTIONS -->
+<section class="section" style="background:var(--espresso);color:var(--ivory);">
+  <div class="wrap">
+    <div class="section-head center reveal"><p class="eyebrow" style="color:var(--gold-light);">PAYMENT</p><h2 style="color:var(--ivory);">Pay however suits you</h2></div>
+    <div class="brand-strip reveal" style="opacity:1;">
+      <span style="color:var(--gold-light);">UPI</span><span style="color:var(--gold-light);">Cards</span><span style="color:var(--gold-light);">Cash</span><span style="color:var(--gold-light);">Net Banking</span><span style="color:var(--gold-light);">Gift Cards</span>
+    </div>
+  </div>
+</section>
+
+<!-- 9. STATS -->
+<section class="section" style="padding:50px 0;">
+  <div class="wrap grid cols-4 stagger">
+    <div class="stat"><div class="n">&lt;60s</div><div class="l">AVG BOOKING TIME</div></div>
+    <div class="stat"><div class="n">15min</div><div class="l">CONFIRMATION SPEED</div></div>
+    <div class="stat"><div class="n">98%</div><div class="l">ON-TIME START RATE</div></div>
+    <div class="stat"><div class="n">4.9★</div><div class="l">SERVICE RATING</div></div>
+  </div>
+</section>
+
+<!-- 10. TESTIMONIALS -->
+<section class="section" style="background:var(--ivory-2);">
+  <div class="wrap grid cols-3 stagger">
+    <div class="testimonial"><p class="quote">"Booked my haircut in the time it took to boil water. So easy."</p><div class="who">— Tanvi D.</div></div>
+    <div class="testimonial"><p class="quote">"Loved being able to pick my exact stylist upfront."</p><div class="who">— Arjun N.</div></div>
+    <div class="testimonial"><p class="quote">"Reminder texts meant I never missed my slot."</p><div class="who">— Zara H.</div></div>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="section">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head center reveal"><p class="eyebrow">BOOKING FAQ</p><h2>Still have questions?</h2></div>
+    <div class="accordion reveal">
+      <div class="accordion-item open">
+        <div class="accordion-q"><span>Do I need to pay a deposit?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>No deposit is needed for standard services. Bridal packages require a 25% deposit.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-q"><span>Can I change my stylist after booking?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>Yes, contact us up to 2 hours before your appointment to switch stylists, subject to availability.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-q"><span>What if I'm running late?</span><span class="plus">+</span></div>
+        <div class="accordion-a"><p>Call the studio — we hold a 15-minute grace window before adjusting your service time.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. CTA -->
+<section class="section cta-band">
+  <div class="wrap reveal">
+    <h2>Still deciding?</h2>
+    <p style="margin:0 auto 28px;color:#fbeef0;">Message our concierge team — we'll help you choose.</p>
+    <a href="about.html" class="btn" style="background:var(--espresso);border-color:var(--espresso);">Talk to Concierge</a>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-logo"><img src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=260&h=104&output=webp&q=80&fit=inside" alt="Stackly"></div>
+      <p style="max-width:280px;color:#b9ac9a;font-size:.92rem;">A premium beauty & salon studio in Mumbai, dedicated to unhurried, precise craft.</p>
+      <div class="social-row">
+        <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2.1.26 2.6.46.6.24 1.1.55 1.6 1.04.5.5.8 1 1.04 1.6.2.5.4 1.4.46 2.6.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.26 2.1-.46 2.6-.24.6-.55 1.1-1.04 1.6-.5.5-1 .8-1.6 1.04-.5.2-1.4.4-2.6.46-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2.1-.26-2.6-.46-.6-.24-1.1-.55-1.6-1.04-.5-.5-.8-1-1.04-1.6-.2-.5-.4-1.4-.46-2.6C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.26-2.1.46-2.6.24-.6.55-1.1 1.04-1.6.5-.5 1-.8 1.6-1.04.5-.2 1.4-.4 2.6-.46C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5 0-4.75.07-1 .05-1.6.22-1.96.36-.5.2-.85.42-1.22.8-.38.37-.6.72-.8 1.22-.14.36-.31.96-.36 1.96C2.8 8.5 2.8 8.86 2.8 12s0 3.5.07 4.75c.05 1 .22 1.6.36 1.96.2.5.42.85.8 1.22.37.38.72.6 1.22.8.36.14.96.31 1.96.36C8.5 21.2 8.86 21.2 12 21.2s3.5 0 4.75-.07c1-.05 1.6-.22 1.96-.36.5-.2.85-.42 1.22-.8.38-.37.6-.72.8-1.22.14-.36.31-.96.36-1.96.07-1.25.07-1.61.07-4.75s0-3.5-.07-4.75c-.05-1-.22-1.6-.36-1.96-.2-.5-.42-.85-.8-1.22-.37-.38-.72-.6-1.22-.8-.36-.14-.96-.31-1.96-.36C15.5 4 15.14 4 12 4zm0 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 1.8a2.7 2.7 0 100 5.4 2.7 2.7 0 000-5.4zm5.7-2a1.05 1.05 0 11-2.1 0 1.05 1.05 0 012.1 0z"/></svg></a>
+        <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.6h2.55l.38-2.96h-2.93V8.53c0-.86.24-1.44 1.47-1.44h1.57V4.46C16.2 4.4 15.3 4.32 14.26 4.32c-2.16 0-3.64 1.32-3.64 3.75v2.37H8.06v2.96h2.56V21h2.88z"/></svg></a>
+        <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 5.9c-.7.32-1.5.53-2.3.63.84-.5 1.47-1.3 1.77-2.24-.78.47-1.65.8-2.57.98A4.05 4.05 0 0016 4c-2.24 0-4.05 1.82-4.05 4.06 0 .32.03.63.1.93-3.37-.17-6.36-1.79-8.36-4.25-.35.6-.55 1.3-.55 2.05 0 1.4.72 2.64 1.8 3.37-.67-.02-1.3-.2-1.85-.5v.05c0 1.96 1.4 3.6 3.25 3.97-.34.1-.7.14-1.07.14-.26 0-.51-.02-.76-.07.52 1.6 2 2.77 3.77 2.8A8.13 8.13 0 012 18.4a11.5 11.5 0 006.2 1.8c7.44 0 11.5-6.16 11.5-11.5 0-.18 0-.35-.01-.53.79-.57 1.47-1.28 2.01-2.09-.72.32-1.5.53-2.3.63" /></svg></a>
+        <a href="404.html" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.64 7.86 6.36 9.32-.09-.79-.17-2 .03-2.86.19-.79 1.23-5.05 1.23-5.05s-.31-.63-.31-1.55c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.05.52 1.9 1.55 1.9 1.86 0 3.29-1.96 3.29-4.78 0-2.5-1.8-4.25-4.36-4.25-2.97 0-4.71 2.22-4.71 4.53 0 .9.34 1.86.78 2.38.08.1.1.19.07.29-.08.33-.26 1.05-.3 1.2-.05.19-.16.24-.36.14-1.34-.62-2.18-2.57-2.18-4.14 0-3.37 2.45-6.47 7.06-6.47 3.71 0 6.59 2.64 6.59 6.17 0 3.68-2.32 6.64-5.55 6.64-1.08 0-2.1-.56-2.45-1.23l-.67 2.54c-.24.93-.9 2.1-1.34 2.81A10 10 0 1012 2z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Membership</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit Us</h4>
+      <ul>
+        <li>204 Linking Road, Bandra West, Mumbai</li>
+        <li>+91 98200 12345</li>
+        <li>hello@stacklysalon.in</li>
+        <li>Tue–Sun, 10am – 8pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Stackly Beauty & Salon. All rights reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<div class="back-to-top" aria-label="Back to top">↑</div>
+<script src="js/main.js"></script>
+</body>
+</html>

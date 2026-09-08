@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — Stackly Beauty & Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="login-shell">
+  <div class="login-visual">
+    <div class="content">
+      <img class="logo-mark" src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=260&h=104&output=webp&q=80&fit=inside" alt="Stackly">
+      <h2>Join Stackly</h2>
+      <p>Create an account to book faster, track your visits, and hold onto your loyalty points.</p>
+      <div style="margin-top:34px;"><a href="index.html" class="btn ghost" style="border-color:#F7F1E8;color:#F7F1E8;">← Back to Website</a></div>
+    </div>
+  </div>
+
+  <div class="login-panel">
+    <div class="login-card">
+      <p class="eyebrow" style="margin-bottom:6px;">CUSTOMER SIGN UP</p>
+      <h2 style="margin-bottom:24px;">Create your account</h2>
+
+      <div class="login-error" id="signup-error"></div>
+      <form class="login-form" id="signup-form">
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" id="signup-name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="signup-email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label>Phone Number</label>
+          <input type="tel" id="signup-phone" placeholder="+91 00000 00000" required>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="signup-password" placeholder="••••••••" required>
+        </div>
+        <div class="field" style="margin-bottom:20px;">
+          <label>Confirm Password</label>
+          <input type="password" id="signup-confirm" placeholder="••••••••" required>
+        </div>
+        <div class="row-between" style="justify-content:flex-start;gap:8px;">
+          <label class="checkbox-inline"><input type="checkbox" required> I agree to the <a href="#" style="margin-left:4px;">Terms</a>&nbsp;and&nbsp;<a href="#">Privacy Policy</a></label>
+        </div>
+        <button type="submit" class="btn gold pulse" style="width:100%;justify-content:center;margin-top:22px;">Create Account</button>
+      </form>
+      <div class="demo-hint">Demo: fill in any details — this is a front-end demo, no real account is created.</div>
+      <p style="text-align:center;font-size:.86rem;margin-top:22px;color:#6b6259;">Already have an account? <a href="login.html" style="color:var(--rose);font-weight:700;">Sign in</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('#signup-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.querySelector('#signup-name').value.trim();
+    const email = document.querySelector('#signup-email').value.trim();
+    const phone = document.querySelector('#signup-phone').value.trim();
+    const password = document.querySelector('#signup-password').value.trim();
+    const confirm = document.querySelector('#signup-confirm').value.trim();
+    const errorBox = document.querySelector('#signup-error');
+
+    if (!name || !email || !phone || !password || !confirm) {
+      errorBox.textContent = 'Please fill in every field to continue.';
+      errorBox.classList.add('show');
+      return;
+    }
+    if (password !== confirm) {
+      errorBox.textContent = 'Passwords do not match.';
+      errorBox.classList.add('show');
+      return;
+    }
+    if (password.length < 6) {
+      errorBox.textContent = 'Password should be at least 6 characters.';
+      errorBox.classList.add('show');
+      return;
+    }
+
+    errorBox.classList.remove('show');
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Creating account...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.textContent = 'Account created ✓';
+      btn.style.background = '#3f8a5a';
+      btn.style.borderColor = '#3f8a5a';
+      setTimeout(() => { window.location.href = 'login.html'; }, 600);
+    }, 900);
+  });
+});
+</script>
+</body>
+</html>

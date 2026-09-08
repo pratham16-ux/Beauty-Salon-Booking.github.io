@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Stackly Beauty & Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dash-body" data-role="admin">
+
+<div class="sidebar-overlay"></div>
+<div class="dash-shell">
+
+  <aside class="dash-sidebar">
+    <div class="logo-wrap"><img src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=260&h=104&output=webp&q=80&fit=inside" alt="Stackly"></div>
+    <span class="sidebar-role-tag"><span class="dot"></span> Admin Console</span>
+    <ul class="dash-nav">
+      <li class="nav-group-label">Main</li>
+      <li><a href="#" data-section="sec-overview" class="active"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span> Overview</a></li>
+      <li><a href="#" data-section="sec-bookings"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="9" x2="21" y2="9"/></svg></span> Bookings</a></li>
+      <li><a href="#" data-section="sec-customers"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="18" cy="8.5" r="2.4"/><path d="M15.5 20c0-2.6 1.6-4.7 3.7-5.3"/></svg></span> Customers</a></li>
+
+      <li class="nav-group-label">Operations</li>
+      <li><a href="#" data-section="sec-staff"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.2 3.6-7 8-7s8 2.8 8 7"/><polyline points="9,20 11,22 15,17"/></svg></span> Staff</a></li>
+      <li><a href="#" data-section="sec-services"><span class="ic"><svg viewBox="0 0 24 24"><path d="M20.6 12.3L12.7 20.2a1.9 1.9 0 01-2.7 0l-6.2-6.2a1.9 1.9 0 010-2.7L11.7 3.4 20.6 3.4 20.6 12.3z"/><circle cx="16.5" cy="7.5" r="1.3"/></svg></span> Services & Pricing</a></li>
+      <li><a href="#" data-section="sec-reports"><span class="ic"><svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="4" y2="10"/><line x1="10" y1="20" x2="10" y2="4"/><line x1="16" y1="20" x2="16" y2="13"/><line x1="22" y1="20" x2="22" y2="7"/></svg></span> Reports & Analytics</a></li>
+      <li><a href="#" data-section="sec-reviews"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.6 1.6-7-5.3-4.6 7-.6L12 2l2.9 6.7 7 .6-5.3 4.6 1.6 7z"/></svg></span> Reviews & Feedback</a></li>
+
+      <li class="nav-group-label">Account</li>
+      <li><a href="#" data-section="sec-settings"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13.5a1.7 1.7 0 000-3l1.1-1.6-1.7-1.7-1.6 1.1a1.7 1.7 0 00-3 0l-.3-1.9h-2.4l-.3 1.9a1.7 1.7 0 00-3 0L6.6 7.2 4.9 8.9l1.1 1.6a1.7 1.7 0 000 3L4.9 15l1.7 1.7 1.6-1.1a1.7 1.7 0 003 0l.3 1.9h2.4l.3-1.9a1.7 1.7 0 003 0l1.6 1.1 1.7-1.7z"/></svg></span> Studio Settings</a></li>
+    </ul>
+  
+    <div class="logout-link"><a href="#" class="logout-btn"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span> Log Out</a></div>
+  <div class="sidebar-plan">
+      <div class="sp-top"><b>Stackly Business</b><span class="badge-soft" style="padding:2px 10px;font-size:.68rem;">Active</span></div>
+      <div class="sp-meta">HQ · Bengaluru, Karnataka</div>
+    </div> 
+  </aside>
+
+  <main class="dash-main">
+
+    <div class="dash-topbar">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+        <div class="topbar-left">
+          <div class="breadcrumb">Admin <span>›</span> <b>Overview</b></div>
+          <h1>Admin Console — <span data-user-name>Admin</span></h1>
+          <p class="sub">Login ID: <strong data-user-id>—</strong> · Last sign-in: <span data-login-time>—</span></p>
+        </div>
+      </div>
+      <div class="topbar-tools">
+        <div class="dash-search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+          <input type="text" placeholder="Search clients, staff, bookings...">
+        </div>
+        <div class="notif-wrap">
+          <div class="notif-bell" data-dropdown-toggle="#notif-panel">
+            <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>
+            <span class="notif-badge">5</span>
+          </div>
+          <div class="dropdown-panel" id="notif-panel">
+            <div class="dp-head">Notifications</div>
+            <div class="notif-item"><span class="dot"></span><div class="txt"><b>New booking request</b><span>Meera Kapoor · Balayage, 4:00 PM</span></div></div>
+            <div class="notif-item"><span class="dot"></span><div class="txt"><b>Staff on leave</b><span>Nadia Fernandes marked unavailable today</span></div></div>
+            <div class="notif-item"><span class="dot"></span><div class="txt"><b>Monthly report ready</b><span>September revenue summary generated</span></div></div>
+            <div class="dp-foot">View all notifications</div>
+          </div>
+        </div>
+        <div class="user-chip user-menu" data-dropdown-toggle="#user-panel">
+          <div class="avatar"><span data-user-initial>A</span></div>
+          <div class="meta">
+            <div class="name" data-user-name>Admin</div>
+            <div class="id" data-user-id>—</div>
+          </div>
+          <svg class="chip-caret" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
+          <div class="dropdown-panel" id="user-panel">
+            <a href="#" class="user-menu-item" data-section-jump="sec-settings">Studio Settings</a>
+            <a href="#" class="user-menu-item danger logout-btn">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="dash-section" id="sec-overview">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Today's Bookings</div><div class="k-value" data-target="24">0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div></div>
+          <div class="k-delta">+6 vs yesterday</div><svg class="spark"></svg>
+        </div>
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Monthly Revenue</div><div class="k-value" data-target="482000" data-prefix="₹">₹0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="20" x2="4" y2="10"/><line x1="10" y1="20" x2="10" y2="4"/><line x1="16" y1="20" x2="16" y2="13"/><line x1="22" y1="20" x2="22" y2="7"/></svg></div></div>
+          <div class="k-delta">+12.4% MoM</div><svg class="spark"></svg>
+        </div>
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">Active Staff</div><div class="k-value" data-target="18">0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></div></div>
+          <div class="k-delta">2 on leave</div><svg class="spark"></svg>
+        </div>
+        <div class="kpi-card">
+          <div class="k-top"><div><div class="k-label">New Customers</div><div class="k-value" data-target="63">0</div></div><div class="k-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="18" cy="8.5" r="2.4"/><path d="M15.5 20c0-2.6 1.6-4.7 3.7-5.3"/></svg></div></div>
+          <div class="k-delta down">-3% MoM</div><svg class="spark"></svg>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Revenue — Last 6 Months</h3><span class="badge-soft">₹28.5L total</span></div>
+        <div class="linechart-wrap" data-points="345000,412000,378000,468000,431000,482000" data-labels="Apr,May,Jun,Jul,Aug,Sep"></div>
+      </div>
+
+      <div class="dash-grid-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Recent Activity</h3></div>
+          <div class="timeline">
+            <div class="timeline-item"><div class="t-title">New booking — Meera Kapoor</div><div class="t-meta">10 minutes ago</div></div>
+            <div class="timeline-item"><div class="t-title">Rohan Mehta completed a service</div><div class="t-meta">45 minutes ago</div></div>
+            <div class="timeline-item"><div class="t-title">Nadia Fernandes marked on leave</div><div class="t-meta">2 hours ago</div></div>
+            <div class="timeline-item"><div class="t-title">New 5★ review from Vikram Joshi</div><div class="t-meta">4 hours ago</div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Booking Mix</h3></div>
+          <div class="donut-wrap">
+            <div class="donut" style="--p1:48%;--p2:78%;"></div>
+            <div class="legend">
+              <div><span class="dot" style="background:var(--rose);"></span> Hair (48%)</div>
+              <div><span class="dot" style="background:var(--espresso);"></span> Skin & Spa (30%)</div>
+              <div><span class="dot" style="background:#d8cfc2;"></span> Nails & Other (22%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Today's Bookings — Needs Attention</h3></div>
+        <table class="dash-table">
+          <thead><tr><th>Client</th><th>Service</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>Meera Kapoor</td><td>Balayage & Colour</td><td>4:00 PM</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn primary" data-action="approve">Approve</button><button class="action-btn danger" data-action="cancel">Decline</button></td></tr>
+            <tr><td>Farah Iqbal</td><td>Radiance Facial</td><td>5:30 PM</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn primary" data-action="approve">Approve</button><button class="action-btn danger" data-action="cancel">Decline</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BOOKINGS -->
+    <section class="dash-section" id="sec-bookings">
+      <div class="panel">
+        <div class="panel-head"><h3>All Bookings</h3><button class="action-btn primary" data-open-modal="add-modal">+ New Booking</button></div>
+        <div class="table-toolbar">
+          <div class="filter-tabs"><button class="active" data-filter="all">All</button><button data-filter="pending">Pending</button><button data-filter="confirmed">Confirmed</button><button data-filter="completed">Completed</button></div>
+          <div class="mini-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg><input type="text" placeholder="Search bookings..."></div>
+        </div>
+        <table class="dash-table">
+          <thead><tr><th class="sortable">Client</th><th class="sortable">Service</th><th>Stylist</th><th class="sortable">Date</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>Meera Kapoor</td><td>Balayage</td><td>Aisha Rao</td><td>06 Sep, 4:00 PM</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn primary" data-action="approve">Approve</button><button class="action-btn danger" data-action="cancel">Decline</button></td></tr>
+            <tr><td>Farah Iqbal</td><td>Radiance Facial</td><td>Nadia Fernandes</td><td>06 Sep, 5:30 PM</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn primary" data-action="approve">Approve</button><button class="action-btn danger" data-action="cancel">Decline</button></td></tr>
+            <tr><td>Ananya Sen</td><td>Bridal Trial</td><td>Priya Sen</td><td>07 Sep, 11:00 AM</td><td><span class="status-pill confirmed">Confirmed</span></td>
+              <td><button class="action-btn" data-action="complete">Mark Done</button><button class="action-btn danger" data-action="cancel">Cancel</button></td></tr>
+            <tr><td>Vikram Joshi</td><td>Men's Grooming</td><td>Rohan Mehta</td><td>05 Sep, 2:00 PM</td><td><span class="status-pill completed">Completed</span></td>
+              <td><button class="action-btn" data-action="view">View</button></td></tr>
+          </tbody>
+        </table>
+        <div class="table-pagination"><span>Showing 1–4 of 4</span><div class="page-btns"><button class="active">1</button></div></div>
+      </div>
+    </section>
+
+    <!-- CUSTOMERS -->
+    <section class="dash-section" id="sec-customers">
+      <div class="panel">
+        <div class="panel-head"><h3>Customer Directory</h3><button class="action-btn primary" data-open-modal="invite-modal">+ Add Customer</button></div>
+        <table class="dash-table">
+          <thead><tr><th>Name</th><th>Phone</th><th>Total Visits</th><th>Last Visit</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Meera Kapoor</td><td>+91 98200 11111</td><td>12</td><td>18 Aug 2026</td><td><button class="action-btn" data-action="view">View</button></td></tr>
+            <tr><td>Farah Iqbal</td><td>+91 98200 22222</td><td>7</td><td>02 Aug 2026</td><td><button class="action-btn" data-action="view">View</button></td></tr>
+            <tr><td>Vikram Joshi</td><td>+91 98200 33333</td><td>21</td><td>05 Sep 2026</td><td><button class="action-btn" data-action="view">View</button></td></tr>
+            <tr><td>Ananya Sen</td><td>+91 98200 44444</td><td>3</td><td>29 Jul 2026</td><td><button class="action-btn" data-action="view">View</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- STAFF -->
+    <section class="dash-section" id="sec-staff">
+      <div class="panel">
+        <div class="panel-head"><h3>Team & Availability</h3><button class="action-btn primary" data-open-modal="invite-modal">+ Invite Staff</button></div>
+        <div class="avatar-list">
+          <div class="avatar-row"><div class="av">A</div><div class="meta"><div class="n">Aisha Rao</div><div class="s">Colour Director · On duty</div></div><label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
+          <div class="avatar-row"><div class="av">R</div><div class="meta"><div class="n">Rohan Mehta</div><div class="s">Master Barber · On duty</div></div><label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
+          <div class="avatar-row"><div class="av">N</div><div class="meta"><div class="n">Nadia Fernandes</div><div class="s">Skin Therapist · On leave</div></div><label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label></div>
+          <div class="avatar-row"><div class="av">P</div><div class="meta"><div class="n">Priya Sen</div><div class="s">Bridal Lead · On duty</div></div><label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="dash-section" id="sec-services">
+      <div class="panel">
+        <div class="panel-head"><h3>Services & Pricing</h3><button class="action-btn primary" data-action="add">+ Add Service</button></div>
+        <table class="dash-table">
+          <thead><tr><th>Service</th><th>Duration</th><th>Price</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Signature Haircut</td><td>60 min</td><td>₹1,200</td><td><span class="status-pill confirmed">Active</span></td><td><button class="action-btn" data-action="save">Edit</button><button class="action-btn danger" data-action="delete">Remove</button></td></tr>
+            <tr><td>Balayage & Colour</td><td>3 hrs</td><td>₹4,500</td><td><span class="status-pill confirmed">Active</span></td><td><button class="action-btn" data-action="save">Edit</button><button class="action-btn danger" data-action="delete">Remove</button></td></tr>
+            <tr><td>Radiance Facial</td><td>50 min</td><td>₹2,000</td><td><span class="status-pill confirmed">Active</span></td><td><button class="action-btn" data-action="save">Edit</button><button class="action-btn danger" data-action="delete">Remove</button></td></tr>
+            <tr><td>Keratin Smoothing</td><td>3 hrs</td><td>₹6,000</td><td><span class="status-pill pending">Draft</span></td><td><button class="action-btn" data-action="save">Edit</button><button class="action-btn danger" data-action="delete">Remove</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- REPORTS & ANALYTICS -->
+    <section class="dash-section" id="sec-reports">
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="k-label">This Month</div><div class="k-value" data-target="482000" data-prefix="₹">₹0</div><div class="k-delta">+12.4%</div></div>
+        <div class="kpi-card"><div class="k-label">Last Month</div><div class="k-value" data-target="428900" data-prefix="₹">₹0</div><div class="k-delta">baseline</div></div>
+        <div class="kpi-card"><div class="k-label">Avg. Ticket Size</div><div class="k-value" data-target="2150" data-prefix="₹">₹0</div><div class="k-delta">+₹120</div></div>
+        <div class="kpi-card"><div class="k-label">Refunds</div><div class="k-value" data-target="3" data-prefix="₹">₹0</div><div class="k-delta down">2 pending</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Bookings This Week</h3><button class="action-btn" data-action="export">Export CSV</button></div>
+        <div class="bar-chart-wrap">
+          <div class="bar-chart">
+            <div class="bar" style="height:52%"><span>Mon</span></div>
+            <div class="bar" style="height:64%"><span>Tue</span></div>
+            <div class="bar" style="height:58%"><span>Wed</span></div>
+            <div class="bar" style="height:78%"><span>Thu</span></div>
+            <div class="bar" style="height:88%"><span>Fri</span></div>
+            <div class="bar" style="height:100%"><span>Sat</span></div>
+            <div class="bar" style="height:70%"><span>Sun</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Revenue by Category</h3></div>
+        <div class="progress-row"><div class="top"><span>Hair Services</span><span>48%</span></div><div class="progress-track"><div class="progress-fill" data-value="48"></div></div></div>
+        <div class="progress-row"><div class="top"><span>Skin & Spa</span><span>30%</span></div><div class="progress-track"><div class="progress-fill" data-value="30"></div></div></div>
+        <div class="progress-row"><div class="top"><span>Nails</span><span>14%</span></div><div class="progress-track"><div class="progress-fill" data-value="14"></div></div></div>
+        <div class="progress-row"><div class="top"><span>Bridal & Other</span><span>8%</span></div><div class="progress-track"><div class="progress-fill" data-value="8"></div></div></div>
+      </div>
+
+      <div class="dash-grid-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Top Services</h3></div>
+          <table class="dash-table">
+            <thead><tr><th>Service</th><th>Bookings</th><th>Revenue</th></tr></thead>
+            <tbody>
+              <tr><td>Balayage & Colour</td><td>62</td><td>₹2,79,000</td></tr>
+              <tr><td>Signature Haircut</td><td>140</td><td>₹1,68,000</td></tr>
+              <tr><td>Radiance Facial</td><td>58</td><td>₹1,16,000</td></tr>
+              <tr><td>Bridal Trial</td><td>9</td><td>₹54,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Staff Performance</h3></div>
+          <table class="dash-table">
+            <thead><tr><th>Stylist</th><th>Bookings</th><th>Rating</th></tr></thead>
+            <tbody>
+              <tr><td>Aisha Rao</td><td>71</td><td><div class="rating-cell"><div class="stars">★★★★★</div><span>4.9</span></div></td></tr>
+              <tr><td>Rohan Mehta</td><td>96</td><td><div class="rating-cell"><div class="stars">★★★★<span class="off">★</span></div><span>4.8</span></div></td></tr>
+              <tr><td>Nadia Fernandes</td><td>54</td><td><div class="rating-cell"><div class="stars">★★★★★</div><span>5.0</span></div></td></tr>
+              <tr><td>Priya Sen</td><td>38</td><td><div class="rating-cell"><div class="stars">★★★★<span class="off">★</span></div><span>4.7</span></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="dash-section" id="sec-reviews">
+      <div class="panel">
+        <div class="panel-head"><h3>Customer Reviews</h3><span class="badge-soft">4.8 average · 214 reviews</span></div>
+        <p class="section-intro">Moderate incoming reviews before they appear publicly on the booking site.</p>
+        <div class="table-toolbar">
+          <div class="filter-tabs"><button class="active" data-filter="all">All</button><button data-filter="pending">Pending</button><button data-filter="confirmed">Published</button></div>
+          <div class="mini-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg><input type="text" placeholder="Search reviews..."></div>
+        </div>
+        <table class="dash-table">
+          <thead><tr><th>Client</th><th>Stylist</th><th>Rating</th><th>Comment</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>Vikram Joshi</td><td>Rohan Mehta</td><td><div class="stars">★★★★★</div></td><td>Best fade I've had in Bengaluru, will be back.</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn primary" data-action="publish">Publish</button><button class="action-btn danger" data-action="hide">Hide</button></td></tr>
+            <tr><td>Meera Kapoor</td><td>Aisha Rao</td><td><div class="stars">★★★★<span class="off">★</span></div></td><td>Lovely balayage, salon ran about 20 minutes behind.</td><td><span class="status-pill pending">Pending</span></td>
+              <td><button class="action-btn primary" data-action="publish">Publish</button><button class="action-btn danger" data-action="hide">Hide</button></td></tr>
+            <tr><td>Ananya Sen</td><td>Priya Sen</td><td><div class="stars">★★★★★</div></td><td>Priya made my bridal trial completely stress-free.</td><td><span class="status-pill confirmed">Published</span></td>
+              <td><button class="action-btn danger" data-action="hide">Hide</button></td></tr>
+            <tr><td>Farah Iqbal</td><td>Nadia Fernandes</td><td><div class="stars">★★★★★</div></td><td>Skin feels amazing after the radiance facial.</td><td><span class="status-pill confirmed">Published</span></td>
+              <td><button class="action-btn danger" data-action="hide">Hide</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="dash-section" id="sec-settings">
+      <div class="panel">
+        <div class="panel-head"><h3>Studio Settings</h3></div>
+        <div class="settings-row"><div><div class="lbl">Online Booking</div><div class="desc">Allow customers to self-book via the website.</div></div><label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
+        <div class="settings-row"><div><div class="lbl">Auto-confirm bookings</div><div class="desc">Skip manual approval for repeat clients.</div></div><label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label></div>
+        <div class="settings-row"><div><div class="lbl">SMS Notifications</div><div class="desc">Notify staff of new bookings instantly.</div></div><label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
+        <div class="settings-row"><div><div class="lbl">Auto-publish reviews</div><div class="desc">Skip moderation for reviews of 4 stars and above.</div></div><label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Admin Account</h3></div>
+        <div class="form-row" style="max-width:640px;">
+          <div class="field"><label>Admin Name</label><input type="text" data-user-name readonly style="background:var(--ivory-2);"></div>
+          <div class="field"><label>Login ID</label><input type="text" data-user-id readonly style="background:var(--ivory-2);"></div>
+        </div>
+        <button class="action-btn primary" data-action="save">Update Account</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Modals -->
+<div class="modal-overlay" id="invite-modal">
+  <div class="modal-box">
+    <h3>Invite Team Member</h3>
+    <div class="field"><label>Full Name</label><input type="text" placeholder="Name"></div>
+    <div class="field"><label>Email</label><input type="email" placeholder="name@stacklysalon.in"></div>
+    <div class="modal-actions">
+      <button class="btn gold" style="flex:1;justify-content:center;" data-close-modal="invite-modal" onclick="dashToast('Invite sent successfully.')">Send Invite</button>
+      <button class="btn ghost" style="flex:1;justify-content:center;" data-close-modal="invite-modal">Cancel</button>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="view-modal">
+  <div class="modal-box">
+    <h3>Details</h3>
+    <p class="lede">Full record and booking history for this entry would appear here.</p>
+    <div class="modal-actions"><button class="btn gold" style="flex:1;justify-content:center;" data-close-modal="view-modal">Close</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="add-modal">
+  <div class="modal-box">
+    <h3>Create Booking</h3>
+    <div class="field"><label>Client Name</label><input type="text" placeholder="Client name"></div>
+    <div class="field"><label>Service</label><select><option>Signature Haircut</option><option>Balayage & Colour</option><option>Radiance Facial</option></select></div>
+    <div class="modal-actions">
+      <button class="btn gold" style="flex:1;justify-content:center;" data-close-modal="add-modal" onclick="dashToast('Booking created.')">Create</button>
+      <button class="btn ghost" style="flex:1;justify-content:center;" data-close-modal="add-modal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
